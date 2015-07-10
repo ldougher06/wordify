@@ -3,17 +3,24 @@
     <section>
       <h5>Type words here</h5>
       <input type="text" ng-model="list" class="card user-search" rows="5" maxlength="500"></textarea>
-      <button ng-click="doSearch(list)">Search Tracks</button>
+      <button class="button button-dark" ng-click="doSearch(list)">Search Tracks</button>
     </section>
 
-    <section ng-repeat="song in playlist" class="output item item-divider">
-      <section>{{song.name}}</section>
+    <section >
+      <ul class="list" ng-repeat="song in playlist" class="output item item-divider">
+        <li class="item item-thumbnail-left"><img ng-src="{{song.album.images[0].url}}" alt-="album art">
+          <h3>{{song.name}}</h3>
+          <p>{{song.artists[0].name}}</p>
+        </li>
+      <section>
+
+    <!-- </section> -->
       <!-- <ul class="list">
         <li class="item item-thumbnail-left"><img src="" alt-="album art">song will be here</li>
         <li class="item item-thumbnail-left"><img src="">song will be here</li>
         <li class="item item-thumbnail-left"><img src="">song will be here</li>
       </ul> -->
-    </section>
+   <!--  </section> -->
     <!-- <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
         <img ng-src="{{chat.face}}">
