@@ -53,20 +53,10 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-playlist': {
           templateUrl: 'templates/tab-playlist.html',
-          controller: 'ChatsCtrl'
+          controller: 'playlistCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
-
   .state('tab.contact', {
     url: '/contact',
     views: {
