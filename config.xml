@@ -2,10 +2,10 @@
 <widget id="com.ionicframework.wordify666035" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>wordify</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Using words to generate music playlists
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+  <author email="katy.justiss@gmail.com">
+      Simone Gonzalez, Logan Dougher, Katy Justiss
     </author>
   <content src="index.html"/>
   <access origin="*"/>
