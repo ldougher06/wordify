@@ -53,7 +53,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-playlist': {
           templateUrl: 'templates/tab-playlist.html',
-          controller: 'playlistCtrl'
+          controller: 'playlistCtrl',
+          controllerAs: 'playlist'
         }
       }
     })
