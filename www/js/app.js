@@ -63,7 +63,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'tab-contact': {
         templateUrl: 'templates/tab-contact.html',
-        controller: 'AccountCtrl'
       }
     }
   });
