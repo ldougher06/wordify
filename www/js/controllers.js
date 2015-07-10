@@ -1,5 +1,6 @@
 angular.module('starter.controllers', [])
 
+<<<<<<< HEAD
 .controller('DashCtrl', function($scope) {
 
 })
@@ -27,4 +28,11 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+=======
+.controller('playlistCtrl', function($scope) {
+  var API = "https://api.spotify.com/v1/search?q=";
+  var list = "";
+  list = $scope.songsearch;
+  console.log(list);
+>>>>>>> 1f929bc6dcfe4525067abccf070b2ec5bb9f318b
 });
