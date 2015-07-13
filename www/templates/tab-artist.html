@@ -1,0 +1,25 @@
+<ion-view view-title="Artist" ng-controller="ArtistCtrl">
+  <ion-content>
+    <div class="list">
+    <h5>Search by Artist Name:</h5>
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          <i class="icon ion-ios-search placeholder-icon"></i>
+          <input type="text" placeholder="Beatles" ng-model="artists" ng-click="clearForm(artists)" required>
+        </label>
+        <button class="button button-small button-balanced" ng-click="searchArtist(artists)">
+          Search
+        </button>
+      </div>
+
+    <div class="list card" ng-repeat="artist in artistlist track by $index">
+      <div class="item item-avatar">
+        <img class="item item-image" ng-src="{{artist.images[0].url}}" alt-="album art">
+        <h3>{{artist.name}}</h3>
+        <p>Followers: {{artist.followers.total}}</p>
+        <p>Popularity: {{artist.popularity}}</p>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
