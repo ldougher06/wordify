@@ -4,13 +4,30 @@
       <div class="container">
         <h1>Search for an Artist</h1>
         <form id="search-form">
+          <input type="text" id="query" ng-model="list" value="" class="form-control" />
+          <input type="submit" id="search" class="button button-primary" value="Search" ng-click="searchArtistCovers(list)"/>
+        </form>
+        <ul class="list" ng-repeat="song in covers" class="output item item-divider">
+          <li><img ng-src="{{song.album.images[0].url}}">
+            <p>{{song.artists[0].name}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
+
+<!--<ion-view view-title="Dashboard">
+  <ion-content class="padding">
+    <div class="list card">
+      <div class="item card">
+        <h1>Search for an Artist</h1>
+        <form id="search-form">
           <input type="text" id="query" value="" class="form-control" />
           <input type="submit" id="search" class="btn btn-primary" value="Search" />
         </form>
         <div id="results"></div>
       </div>
-    <script>
-      <div style="background-image:url({{images.0.url}})" data-album-id="{{id}}" class="cover"></div>
-    </script>
+    <div><img ng-src="{{artist.images[0].url}}" data-artist-id="{{id}}" class="cover"></div>
   </ion-content>
-</ion-view>
+</ion-view>-->

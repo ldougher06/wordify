@@ -1,30 +1,20 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $http) {
-  var getAlbum = function (albumId, callback) {
-    $http({
-        url: 'https://api.spotify.com/v1/albums/' + albumId,
-        success: function (response) {
-            callback(response);
-        }
-    })
-  }
-  var searchAlbums = function (query) {
-    $http({
-      url: 'https://api.spotify.com/v1/search',
-      data: {
-        q: query,
-        type: 'album'
-      }
-    })
-  }
+.controller('DashCtrl', function($scope, $rootScope, $http) {
+  var API = "https://api.spotify.com/v1/search?q=";
+  var list = "";
+  $scope.covers = [];
 
-  document.getElementById('search-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    searchAlbums(document.getElementById('query').value);
-    }, false);
-  })
+  $scope.searchArtistCovers = function(list) {
+    // list = $scope.list;
+    console.log(list);
 
+    $http.get(API + list + "&type=track")
+      .success(function(data) {
+        $scope.covers.push(data.tracks.items[0]);
+      })
+  }
+})
 
 .controller('playlistCtrl', function($scope, $rootScope, $http) {
   var API = "https://api.spotify.com/v1/search?q=";
